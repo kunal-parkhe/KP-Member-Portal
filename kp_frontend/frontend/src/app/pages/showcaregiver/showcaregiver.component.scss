@@ -1,0 +1,40 @@
+div.a{
+    position: absolute;
+     right: 0;
+
+}
+body{
+  background-color: rgb(118, 148, 123);
+
+}
+table {
+  border: 2px solid black;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px rgb(154, 152, 152);
+  border-style: ridge;
+  
+  
+}
+  
+  table th {
+    background-color: #ccc;
+    color: black;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+
+    
+  }
+  table td{
+    border: 1px solid black;
+    padding: 7px;
+    text-align: center;
+    background-color:white;
+  }
+  h1{
+    text-align: center;
+    color: white;
+  text-shadow: 2px 2px 4px #000000;
+  }

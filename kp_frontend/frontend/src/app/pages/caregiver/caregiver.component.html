@@ -1,0 +1,58 @@
+
+<body>
+    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+    <br>
+    <div class="row">
+        
+            
+        <div id="custom-search-input">
+            
+                         <div class="input-group col-md-12" style="text-align: center">
+                            
+                             <b><h2>Search Caregiver:</h2></b>
+                             <input type="text" class="search-query form-control" placeholder="Search With Id,Firstname ,Lastname,Email Address" [(ngModel)]="searchContent"/>
+                             <button class="btn btn-danger" type="button" >
+                                 <span class=" glyphicon glyphicon-search"></span>
+                             </button>
+                         </div>
+                     </div>
+                     <div class="a">
+                        <button type="button" (click)="ButtonClick()" class="btn btn-info" > Assigned Caregivers </button>
+                    </div>
+    </div><br><br>
+    
+    <div class="container">
+        <table class="table table-dark table-striped-columns">
+            <thead class="table-light">
+              <tr>
+                <th>CAREGIVER ID</th>
+                <th>FIRSTNAME</th>
+                <th>LASTNAME</th>
+                <th>EMAILID</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let care of caregiver | searchfilter: searchContent ">
+                    <td>{{care.caregiverid}}</td>
+                    <td>{{care.firstname}}</td>
+                    <td>{{care.lastname}}</td>
+                    <td>{{care.emailid}}</td>
+                    
+                    <td class="text-center"><button type="Assign" (click)="assignButtonClick(memberId,care.caregiverid)" class="btn btn-success" >+Assign</button></td>
+                    
+                  </tr>
+                  
+                
+            </tbody>
+            
+          </table>
+    </div>
+
+</body>
+
+ 
+  

@@ -1,0 +1,55 @@
+div.a{
+    position: absolute;
+     right: 0;
+
+}
+div.new{
+    position: absolute;
+    //right:0;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-left: 1200px;
+    
+}
+body{
+  background-color: rgb(164, 206, 171);
+
+}
+input[type=text]{
+    width:30%;
+}
+table {
+    border: 2px solid black;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px rgb(154, 152, 152);
+    border-style: ridge;
+    
+    
+  }
+  
+  table th {
+    background-color: #ccc;
+    border: 1px solid rgb(12, 13, 13);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    //border: 2px solid black;
+    text-align: center;
+
+    
+  }
+  table td{
+    border: 1px solid rgb(12, 13, 13);
+    padding: 7px;
+    text-align: center;
+    background-color:white;
+  }
+  td {
+    text-align: center;
+  }
+  b{
+    text-align: center;
+    color: white;
+   text-shadow: 2px 2px 4px #000000;
+  }
+  

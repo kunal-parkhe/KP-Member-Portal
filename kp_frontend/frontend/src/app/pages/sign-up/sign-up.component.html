@@ -1,0 +1,89 @@
+<body>
+  
+  <div class="bootstrap-wrapper">
+      <div class="container">
+              <div class="row mt10">
+                  <div class="col-md-6 offset-md-3" style="margin-top: 70px;margin-right: 25px;border-color: rgb(255, 255, 255);">
+                    <mat-card>
+                      <div class="container text-center">
+                  
+                      </div>
+                      <h1 class="container text-center" style="background-color:rgba(208, 144, 144, 0.773);border-color: rgb(188, 110, 110);font-weight: bolder;">REGISTRATION PORTAL!</h1>
+                      <form 
+                      #f="ngForm"
+                      (ngSubmit)="f.form.valid && formSubmit()"
+                      novalidate>
+                          
+                            
+                            <!-- firstName -->
+                            <mat-form-field class="fullwidth" appearance="outline">
+                              <mat-label>First Name</mat-label>
+                              <input required [(ngModel)]="user.firstname" name="firstName" matInput placeholder="Enter first Name" #firstname="ngModel" pattern="^[a-zA-Z][a-zA-Z ]*$">
+                              
+                            </mat-form-field>
+                            <small class="text-danger" *ngIf="this.submit&&firstname.errors?.['required']">
+                              First name is Required.
+                            </small>
+                            <small class="text-danger" *ngIf="this.submit&&firstname.errors?.['pattern']">
+                              First name should not contain any numbers or special characters.
+                            </small>
+                            <!-- lastName -->
+                            <mat-form-field class="fullwidth" appearance="outline">
+                              <mat-label>Last Name</mat-label>
+                              <input required [(ngModel)]="user.lastname" name="lastName" matInput placeholder="Enter Last Name" #lastname="ngModel" pattern="^[a-zA-Z][a-zA-Z ]*$">
+                              
+                            </mat-form-field>
+                            <small class="text-danger" *ngIf="this.submit&&lastname.errors?.['required']">
+                              Last name is Required.
+                            </small>
+                            <small class="text-danger" *ngIf="this.submit&&lastname.errors?.['pattern']">
+                              Last name should not contain any numbers or special characters.
+                            </small>
+                            <!-- email -->
+                            <mat-form-field class="fullwidth" appearance="outline">
+                              <mat-label>Email Id</mat-label>
+                              <input required [(ngModel)]="user.emailid" name="email" matInput placeholder="Enter Email Id" #email="ngModel" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                              
+                            </mat-form-field>
+                            <small class="text-danger" *ngIf="this.submit&&email.errors?.['required']">
+                              Email id is Required.
+                            </small>
+                            <small class="text-danger" *ngIf="this.submit&&email.errors?.['pattern']">
+                              Please enter valid email address.
+                            </small>
+                            <!-- password -->
+                            <mat-form-field class="fullwidth" appearance="outline">
+                              <mat-label>Password</mat-label>
+                              <input required [(ngModel)]="user.password" name="password" matInput placeholder="Enter Password" #password="ngModel" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*+=]).{10,}$">
+                              
+                            </mat-form-field>
+                            <small class="text-danger" *ngIf="this.submit&&password.errors?.['required']">
+                              Password is Required.
+                            </small>
+                            <small class="text-danger" *ngIf="this.submit&&password.errors?.['pattern']">
+                              Password should contain atleast 1 uppercase,1 lowercase,1 special character and 1 digit.Length must be 10.
+                            </small>
+                            <!-- Address -->                          
+                            <mat-form-field class="fullwidth" appearance="outline">
+                              <mat-label>Address</mat-label>
+                              <input required [(ngModel)]="user.address" name="address" matInput placeholder="Enter Address" #address="ngModel">
+                              
+                            </mat-form-field>
+                            <small class="text-danger" *ngIf="this.submit&&address.errors?.['required']" >
+                              Address is Required.
+                            </small>
+                                            
+                              
+                            
+                            <!-- Button -->
+                            <div class="container text-center">
+                              <button type="submit" mat-stroked-button color="primary" (click)="submit=true" style="background-color:rgb(245, 210, 161)">REGISTER</button>
+                             
+                            </div>
+                      </form>
+                    </mat-card>
+                  </div>
+              </div>
+      </div>
+  </div>
+  </body>

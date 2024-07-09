@@ -1,0 +1,38 @@
+<!-- <p>navbar works!</p> -->
+<mat-toolbar class="back">
+  <a
+  [routerLink]="''"
+    mat-icon-button
+    class="icon"
+    aria-label="icon-button with menu icon"
+  >
+    <mat-icon><span class="material-symbols-outlined">
+      home
+      </span></mat-icon>
+  </a>
+  <span>KP MEMBER PORTAL APPLICATION</span>
+  <span class="spacer" style="margin-right:850px"></span>
+  <a
+  [routerLink]="'/signin'"
+    mat-icon-button
+    class="icon favorite-icon"
+    aria-label="icon-button with heart icon"
+  >
+    <mat-icon>login</mat-icon>
+  </a>
+  <a
+  [routerLink]="'/signup'"
+    mat-icon-button
+    class="icon"
+    aria-label="icon-button with share icon"
+  >
+    <mat-icon class="ml10">how_to_reg</mat-icon>
+</a>
+
+<div class="a">
+  <button type="button"(click)="logout()" class="btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-log-out"></span>  Log out
+  </button>
+</div>
+
+</mat-toolbar>

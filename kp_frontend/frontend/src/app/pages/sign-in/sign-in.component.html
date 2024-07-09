@@ -1,0 +1,46 @@
+<body>
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row mt20">
+      <div class="col-md- offset-md-3"style="margin-top:125px; margin-left: 700px;">
+        <mat-card>
+        <div class="container text-center">
+       
+          <h1 class="text-center" style="margin-top:30px; ">SIGN IN!</h1>
+          <form #f="ngForm"
+          (ngSubmit)="f.form.valid && formSubmit()"
+          novalidate>
+            <!-- username -->
+            <mat-form-field class="fullwidth" appearance="outline">
+              <mat-label>User Name</mat-label>
+              <input required [(ngModel)]="user.email" name="UserName" matInput placeholder="Enter UserName" #email="ngModel" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" />
+             
+            </mat-form-field>
+            <small class="text-danger" *ngIf="this.submit&&email.errors?.['pattern']">
+              Please enter valid email address.
+            </small>
+            <!-- password -->
+            <mat-form-field class="fullwidth" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input required [(ngModel)]="user.password" name="Password" matInput placeholder="Enter Password" #password="ngModel" />
+      
+            </mat-form-field>
+            
+            <small class="text-danger" *ngIf="this.submit&&password.errors?.['required']">
+              Password is Required.
+            </small>
+
+            <div class="container text-center">
+              <button type="submit" (click)="submit=true" mat-stroked-button color="primary" style="background-color:rgb(245, 218, 177)">
+                SignIn
+              </button>
+       
+            </div>
+          </form>
+        </div>
+    </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
